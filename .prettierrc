@@ -1,0 +1,12 @@
+{
+  "tabWidth": 2,
+  "printWidth": 80,
+  "array-element-newline": "always",
+  "semi": true,
+  "arrowParens": "always",
+  "trailingComma": "none",
+  "singleQuote": true,
+  "useTabs": false,
+  "bracketSameLine": false,
+  "singleAttributePerLine": true
+}
