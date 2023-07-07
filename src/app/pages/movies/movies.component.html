@@ -1,13 +1,52 @@
 <div class="container">
-    <div>
-        <p-paginator #paginatorTop [rows]="this.rows" [totalRecords]="this.totalRecords" (onPageChange)="paginateTop($event)"></p-paginator>
-    </div>
-    <div class="grid">
-      <div class="col-6 md:col-3 lg:col-3" *ngFor = "let movie of movies">
-        <rs-item [itemData]="movie"></rs-item>
-      </div>    
-    </div>
-    <div>
-        <p-paginator #paginatorBottom [rows]="this.rows" [totalRecords]="this.totalRecords" (onPageChange)="paginateBottom($event)"></p-paginator>
+  <div class="grid">
+    <div class="col-12">
+      <div class="p-fluid">
+        <!-- <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input
+            type="text"
+            pInputText
+            placeholder="Search"
+            [(ngModel)]="searchValue"
+            (keyup)="searchChanged()"
+          />
+        </span> -->
+        <span class="p-input-icon-right">
+          <i class="cross-icon pi pi-times-circle" (click)="clearFilter()"></i>
+          <input
+            type="text"
+            pInputText
+            placeholder="Search"
+            [(ngModel)]="searchValue"
+            (keyup)="searchChanged()"
+          />
+        </span>
+      </div>
     </div>
   </div>
+  <div>
+    <p-paginator
+      #paginatorTop
+      [rows]="this.rows"
+      [totalRecords]="this.totalRecords"
+      (onPageChange)="paginateTop($event)"
+    ></p-paginator>
+  </div>
+  <div class="grid">
+    <div
+      class="col-6 md:col-3 lg:col-3"
+      *ngFor="let movie of movies"
+    >
+      <rs-item [itemData]="movie"></rs-item>
+    </div>
+  </div>
+  <div>
+    <p-paginator
+      #paginatorBottom
+      [rows]="this.rows"
+      [totalRecords]="this.totalRecords"
+      (onPageChange)="paginateBottom($event)"
+    ></p-paginator>
+  </div>
+</div>
