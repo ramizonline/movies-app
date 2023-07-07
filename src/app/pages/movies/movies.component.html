@@ -1,2 +1,13 @@
-<rs-slider></rs-slider>
-<rs-items-banner></rs-items-banner>
+<div class="container">
+    <div>
+        <p-paginator #paginatorTop [rows]="this.rows" [totalRecords]="this.totalRecords" (onPageChange)="paginateTop($event)"></p-paginator>
+    </div>
+    <div class="grid">
+      <div class="col-6 md:col-3 lg:col-3" *ngFor = "let movie of movies">
+        <rs-item [itemData]="movie"></rs-item>
+      </div>    
+    </div>
+    <div>
+        <p-paginator #paginatorBottom [rows]="this.rows" [totalRecords]="this.totalRecords" (onPageChange)="paginateBottom($event)"></p-paginator>
+    </div>
+  </div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { MovieDto } from '../models/movie';
+import { Movie, MovieCredits, MovieDto, MovieImages, MovieVideoDto } from '../models/movie';
 import { switchMap } from 'rxjs/operators';
 import { of } from 'rxjs';
 
@@ -21,6 +21,48 @@ export class MoviesService {
           return of(res.results.slice(0, count));
         })
       );
+  }
+
+  getMovieVideos(id: string) {
+    return this.http
+      .get<MovieVideoDto>(
+        `${this.baseUrl}/movie/${id}/videos?api_key=${this.apiKey}`
+      )
+      .pipe(
+        switchMap((res) => {
+          return of(res.results);
+        })
+      );
+  }
+
+  getMovieImages(id: string) {
+    return this.http.get<MovieImages>(
+      `${this.baseUrl}/movie/${id}/images?api_key=${this.apiKey}`
+    );
+  }
+
+  getMovie(id: string) {
+    return this.http.get<Movie>(
+      `${this.baseUrl}/movie/${id}?api_key=${this.apiKey}`
+    );
+  }
+
+  searchMovies(page: number) {
+    return this.http
+      .get<MovieDto>(
+        `${this.baseUrl}/movie/popular?page=${page}&api_key=${this.apiKey}`
+      )
+      .pipe(
+        switchMap((res) => {
+          return of(res);
+        })
+      );
+  }
+
+  getMovieCredits(id: string) {
+    return this.http.get<MovieCredits>(
+      `${this.baseUrl}/movie/${id}/credits?api_key=${this.apiKey}`
+    );
   }
 }
 //'https://api.themoviedb.org/3/movie/popular?api_key=45a1ba0110e0970fd0ee1292426b88dd'

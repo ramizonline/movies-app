@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   popularMovies: Movie[] = [];
   upcomingMovies: Movie[] = [];
   topRatedMovies: Movie[] = [];
+  nowPlayingMovies: Movie[] = [];
+
 
   constructor(private moviesService: MoviesService) {}
 
@@ -25,6 +27,10 @@ export class HomeComponent implements OnInit {
     });
     this.moviesService.getMovies('upcoming').subscribe((movies) => {
       this.upcomingMovies = movies
+      //console.log(this.popularMovies);
+    });
+    this.moviesService.getMovies('now_playing').subscribe((movies) => {
+      this.nowPlayingMovies = movies
       //console.log(this.popularMovies);
     });
   }
