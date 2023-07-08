@@ -7,7 +7,11 @@ https://nice-beach-0bd179210.3.azurestaticapps.net/
 -Implement "TV Shows" page which is not there right now.
 
 ----------------------------------------------------------------------
+### Backend based on: 
+https://developer.themoviedb.org/reference/intro/getting-started
 
+
+--------------------------------------------------------------------
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
 ## Development server
