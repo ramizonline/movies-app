@@ -1,7 +1,7 @@
-# Published Demo Preview Site: 
+# Published Demo Preview Site of this MovieApp: 
 https://nice-beach-0bd179210.3.azurestaticapps.net/
 
-
+----------------------------------------------------------------------
 
 # MoviesApp
 
