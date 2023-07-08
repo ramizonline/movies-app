@@ -1,9 +1,12 @@
-# Published Demo Preview Site of this MovieApp: 
+# RSMoviesApp
+
+## Published Demo Preview Site of this MovieApp: 
 https://nice-beach-0bd179210.3.azurestaticapps.net/
 
-----------------------------------------------------------------------
+## Future TODO: 
+-Implement "TV Shows" page which is not there right now.
 
-# MoviesApp
+----------------------------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
