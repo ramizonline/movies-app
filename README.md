@@ -1,3 +1,8 @@
+# Published Demo Preview Site: 
+https://nice-beach-0bd179210.3.azurestaticapps.net/
+
+
+
 # MoviesApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
